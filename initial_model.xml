@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="initial_model" name="initial_model">
+    <annotation>
+      <sbgn xmlns:biouml="http://www.biouml.org/ns">
+        <nodes>
+          <node id="CYP2C9_delay" parent="" type="math-event">
+            <nodeLayout height="0" width="0" x="680" y="240"/>
+          </node>
+          <node id="C_p" parent="" title="pmol/ml или nmol/L" type="math-equation">
+            <nodeLayout height="0" width="0" x="75" y="352"/>
+          </node>
+          <node id="C_p_1" parent="" title="pmol/ml или nmol/L" type="math-equation">
+            <nodeLayout height="0" width="0" x="80" y="430"/>
+          </node>
+          <node id="E3174_elimination" parent="" reactionType="process" ref="E3174_elimination" title="E3174_cc -&gt; E3174_out" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="645" y="345"/>
+          </node>
+          <node Structure="" id="E3174_out" multimer="0" parent="" ref="E3174_out" title="E3174" type="simple chemical">
+            <nodeLayout height="40" width="70" x="685" y="330"/>
+          </node>
+          <node id="L_from_cc_to_pc" parent="" reactionType="process" ref="L_from_cc_to_pc" title="losartan_cc -&gt; losartan_pc" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="655" y="135"/>
+          </node>
+          <node id="L_from_pc_to_cc" parent="" reactionType="process" ref="L_from_pc_to_cc" title="losartan_pc -&gt; losartan_cc" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="655" y="160"/>
+          </node>
+          <node id="absorption" parent="" reactionType="process" ref="absorption" title="losartan_int -&gt; losartan_cc" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="440" y="150"/>
+          </node>
+          <node id="central_compartment" parent="" ref="central_compartment" title="central compartment" type="compartment">
+            <nodeLayout height="360" width="190" x="460" y="80"/>
+          </node>
+          <node id="CYP2C9_reaction" parent="central_compartment" reactionType="process" ref="CYP2C9_reaction" title="losartan_cc -&gt; E3174_cc" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="551" y="252"/>
+          </node>
+          <node Structure="" id="E3174_cc" multimer="0" parent="central_compartment" ref="central_compartment.E3174_cc" title="E3174" type="simple chemical">
+            <nodeLayout height="40" width="70" x="525" y="330"/>
+          </node>
+          <node id="L_elimination" parent="central_compartment" reactionType="process" ref="L_elimination" title="losartan_cc -&gt; losartan_out" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="550" y="110"/>
+          </node>
+          <node Structure="" id="losartan_cc" multimer="0" parent="central_compartment" ref="central_compartment.losartan_cc" title="losartan" type="simple chemical">
+            <nodeLayout height="40" width="70" x="515" y="135"/>
+          </node>
+          <node id="gastric_emptying" parent="" reactionType="process" ref="gastric_emptying" title="losartan_stm -&gt; losartan_int" type="reaction">
+            <nodeLayout height="15" orientation="right" width="15" x="270" y="150"/>
+          </node>
+          <node id="intestine" parent="" ref="intestine" type="compartment">
+            <nodeLayout height="360" width="150" x="285" y="80"/>
+          </node>
+          <node Structure="" id="losartan_int" multimer="0" parent="intestine" ref="intestine.losartan_int" title="losartan" type="simple chemical">
+            <nodeLayout height="40" width="70" x="320" y="135"/>
+          </node>
+          <node id="k_12" parent="" showTitle="false" type="math-equation">
+            <nodeLayout height="0" width="0" x="210" y="239"/>
+          </node>
+          <node id="k_13" parent="" showTitle="false" title="k_21" type="math-equation">
+            <nodeLayout height="0" width="0" x="210" y="299"/>
+          </node>
+          <node id="k_elp" parent="" showTitle="false" type="math-equation">
+            <nodeLayout height="0" width="0" x="132" y="237"/>
+          </node>
+          <node id="k_elp_1" parent="" showTitle="false" title="k_elm" type="math-equation">
+            <nodeLayout height="0" width="0" x="127" y="300"/>
+          </node>
+          <node Structure="" id="losartan_out" multimer="0" parent="" ref="losartan_out" title="losartan" type="simple chemical">
+            <nodeLayout height="40" width="70" x="515" y="10"/>
+          </node>
+          <node id="oral_dose" parent="" showTitle="false" type="math-equation">
+            <nodeLayout height="0" width="0" x="115" y="31"/>
+          </node>
+          <node id="peripherial_compartment" parent="" ref="peripherial_compartment" title="peripherial compartment" type="compartment">
+            <nodeLayout height="0" width="0" x="680" y="80"/>
+          </node>
+          <node Structure="" id="losartan_pc" multimer="0" parent="peripherial_compartment" ref="peripherial_compartment.losartan_pc" title="losartan" type="simple chemical">
+            <nodeLayout height="40" width="70" x="725" y="135"/>
+          </node>
+          <node id="stomach" parent="" ref="stomach" type="compartment">
+            <nodeLayout height="0" width="0" x="109" y="81"/>
+          </node>
+          <node Structure="" id="losartan_stm" multimer="0" parent="stomach" ref="stomach.losartan_stm" title="losartan" type="simple chemical">
+            <nodeLayout height="40" width="70" x="145" y="140"/>
+          </node>
+        </nodes>
+        <edges>
+          <edge edgeType="" from="central_compartment.E3174_cc" id="E3174_elimination__E3174_cc_as_reactant" ref="E3174_elimination__E3174_cc_as_reactant" to="E3174_elimination" type="relation-chemical"/>
+          <edge edgeType="" from="E3174_elimination" id="E3174_elimination__E3174_out_as_product" ref="E3174_elimination__E3174_out_as_product" to="E3174_out" type="relation-chemical"/>
+          <edge edgeType="" from="central_compartment.L_elimination" id="L_elimination__losartan_out_as_product" ref="L_elimination__losartan_out_as_product" to="losartan_out" type="relation-chemical"/>
+          <edge edgeType="" from="central_compartment.losartan_cc" id="L_from_cc_to_pc__losartan_cc_as_reactant" ref="L_from_cc_to_pc__losartan_cc_as_reactant" to="L_from_cc_to_pc" type="relation-chemical"/>
+          <edge edgeType="" from="L_from_cc_to_pc" id="L_from_cc_to_pc__losartan_pc_as_product" ref="L_from_cc_to_pc__losartan_pc_as_product" to="peripherial_compartment.losartan_pc" type="relation-chemical"/>
+          <edge edgeType="" from="L_from_pc_to_cc" id="L_from_pc_to_cc__losartan_cc_as_product" ref="L_from_pc_to_cc__losartan_cc_as_product" to="central_compartment.losartan_cc" type="relation-chemical"/>
+          <edge edgeType="" from="peripherial_compartment.losartan_pc" id="L_from_pc_to_cc__losartan_pc_as_reactant" ref="L_from_pc_to_cc__losartan_pc_as_reactant" to="L_from_pc_to_cc" type="relation-chemical"/>
+          <edge edgeType="" from="absorption" id="absorption__losartan_cc_as_product" ref="absorption__losartan_cc_as_product" to="central_compartment.losartan_cc" type="relation-chemical"/>
+          <edge edgeType="" from="intestine.losartan_int" id="absorption__losartan_int_as_reactant" ref="absorption__losartan_int_as_reactant" to="absorption" type="relation-chemical"/>
+          <edge edgeType="" from="central_compartment.CYP2C9_reaction" id="CYP2C9_reaction__E3174_cc_as_product" ref="CYP2C9_reaction__E3174_cc_as_product" to="central_compartment.E3174_cc" type="relation-chemical"/>
+          <edge edgeType="" from="central_compartment.losartan_cc" id="CYP2C9_reaction__losartan_cc_as_reactant" ref="CYP2C9_reaction__losartan_cc_as_reactant" to="central_compartment.CYP2C9_reaction" type="relation-chemical"/>
+          <edge edgeType="" from="central_compartment.losartan_cc" id="L_elimination__losartan_cc_as_reactant" ref="L_elimination__losartan_cc_as_reactant" to="central_compartment.L_elimination" type="relation-chemical"/>
+          <edge edgeType="" from="gastric_emptying" id="gastric_emptying__losartan_int_as_product" ref="gastric_emptying__losartan_int_as_product" to="intestine.losartan_int" type="relation-chemical"/>
+          <edge edgeType="" from="stomach.losartan_stm" id="gastric_emptying__losartan_stm_as_reactant" ref="gastric_emptying__losartan_stm_as_reactant" to="gastric_emptying" type="relation-chemical"/>
+        </edges>
+        <states/>
+        <viewOptions>
+          <propertyRef name="pathLayouterWrapper" type="ru.biosoft.graph.PathLayouterWrapper">
+            <propertyRef name="pathLayouter" type="ru.biosoft.graph.OrthogonalPathLayouter"/>
+          </propertyRef>
+          <propertyRef elementType="biouml.model.DiagramElementStyleDeclaration" name="styles" type="array"/>
+        </viewOptions>
+        <filters elementType="biouml.model.DiagramFilter" type="[Lbiouml.model.DiagramFilter;"/>
+      </sbgn>
+      <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+        <biouml:diagramInfo/>
+        <biouml:simulationInfo type="biouml.plugins.simulation.java.JavaSimulationEngine">
+          <property name="Threads" short-description="Threads" type="int" value="4"/>
+          <property name="algebraicSolver" short-description="algebraicSolver" type="biouml.plugins.simulation.ae.NewtonSolverWrapperEx">
+            <property name="maxIts" short-description="maxIts" type="double" value="20000.0"/>
+            <property name="tolF" short-description="tolF" type="double" value="1.0E-10"/>
+            <property name="tolMin" short-description="tolMin" type="double" value="1.0E-12"/>
+            <property name="tolX" short-description="tolX" type="double" value="1.0E-13"/>
+          </property>
+          <property name="algebraicSolverName" short-description="algebraicSolverName" type="String" value="NewtonSolver"/>
+          <property name="completionTime" short-description="completionTime" type="double" value="24.0"/>
+          <property name="constraintsViolation" short-description="constraintsViolation" type="String" value="Stop simulation"/>
+          <property name="fastReactions" short-description="fastReactions" type="String" value="ODE system"/>
+          <property name="initialTime" short-description="initialTime" type="double" value="0.0"/>
+          <property name="simulatorOptions" short-description="simulatorOptions" type="biouml.plugins.simulation.ode.jvode.JVodeOptions">
+            <property name="atol" short-description="atol" type="double" value="1.0E-20"/>
+            <property name="detectIncorrectNumbers" short-description="detectIncorrectNumbers" type="boolean" value="false"/>
+            <property name="hMaxInv" short-description="hMaxInv" type="double" value="1.0E-100"/>
+            <property name="hMin" short-description="hMin" type="double" value="1.0E-100"/>
+            <property name="iterations" short-description="iterations" type="int" value="0"/>
+            <property name="jacobianApproximation" short-description="jacobianApproximation" type="int" value="0"/>
+            <property name="method" short-description="method" type="int" value="1"/>
+            <property name="ml" short-description="ml" type="int" value="0"/>
+            <property name="mu" short-description="mu" type="int" value="0"/>
+            <property name="rtol" short-description="rtol" type="double" value="1.0E-12"/>
+            <property name="statisticsMode" short-description="statisticsMode" type="String" value="On"/>
+            <property name="stepsLimit" short-description="stepsLimit" type="int" value="100000"/>
+          </property>
+          <property name="solverName" short-description="solverName" type="String" value="JVode"/>
+          <property name="templateType" short-description="templateType" type="String" value="Auto"/>
+          <property name="timeIncrement" short-description="timeIncrement" type="double" value="0.05"/>
+        </biouml:simulationInfo>
+        <biouml:plotInfo>
+          <plot active="true" autoColorNumber="15" title="Plot" xAutoRange="true" xAxisType="Number" yAutoRange="false" yAxisType="Number">
+            <xVariable name="time" path="" title="time"/>
+            <yVariable name="C_p" path="" pen="1.0;blue;Solid" title="C_p" type="Value"/>
+            <yVariable name="C_m" path="" pen="1.0;red;Solid" title="C_m" type="Value"/>
+          </plot>
+        </biouml:plotInfo>
+        <biouml:viewOptions autoLayout="true" dependencyEdges="false"/>
+      </biouml:BIOUML>
+    </annotation>
+    <listOfCompartments>
+      <compartment constant="false" id="default" name="initial_model" size="1" spatialDimensions="3">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:compartmentInfo completeName="default" height="440" isDefault="true" isTitleHidden="false" shape="0" title="initial_model" width="755" x="0" y="0"/>
+          </biouml:BIOUML>
+        </annotation>
+      </compartment>
+      <compartment constant="false" id="central_compartment" name="central compartment" size="1.0" spatialDimensions="3">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:compartmentInfo completeName="central_compartment" height="360" isTitleHidden="false" shape="0" title="central compartment" width="190" x="460" y="80"/>
+          </biouml:BIOUML>
+        </annotation>
+      </compartment>
+      <compartment constant="false" id="intestine" name="intestine" size="1.0" spatialDimensions="3">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:compartmentInfo completeName="intestine" height="360" isTitleHidden="false" shape="0" title="intestine" width="150" x="285" y="80"/>
+          </biouml:BIOUML>
+        </annotation>
+      </compartment>
+      <compartment constant="false" id="peripherial_compartment" name="peripherial compartment" size="1.0" spatialDimensions="3">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:compartmentInfo completeName="peripherial_compartment" height="0" isTitleHidden="false" shape="0" title="peripherial compartment" width="0" x="680" y="80"/>
+          </biouml:BIOUML>
+        </annotation>
+      </compartment>
+      <compartment constant="false" id="stomach" name="stomach" size="1.0" spatialDimensions="3">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:compartmentInfo completeName="stomach" height="0" isTitleHidden="false" shape="0" title="stomach" width="0" x="109" y="81"/>
+          </biouml:BIOUML>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="E3174_out" initialAmount="0.0" name="E3174">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="E3174_out" height="40" isTitleHidden="false" title="E3174" width="70" x="685" y="330"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="central_compartment" constant="false" hasOnlySubstanceUnits="false" id="E3174_cc" initialAmount="0.0" name="E3174">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="central_compartment.E3174_cc" height="40" isTitleHidden="false" title="E3174" width="70" x="525" y="330"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="central_compartment" constant="false" hasOnlySubstanceUnits="false" id="losartan_cc" initialAmount="0.0" name="losartan">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="central_compartment.losartan_cc" height="40" isTitleHidden="false" title="losartan" width="70" x="515" y="135"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="intestine" constant="false" hasOnlySubstanceUnits="false" id="losartan_int" initialAmount="0.0" name="losartan">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="intestine.losartan_int" height="40" isTitleHidden="false" title="losartan" width="70" x="320" y="135"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="default" constant="false" hasOnlySubstanceUnits="false" id="losartan_out" initialAmount="0.0" name="losartan">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="losartan_out" height="40" isTitleHidden="false" title="losartan" width="70" x="515" y="10"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="peripherial_compartment" constant="false" hasOnlySubstanceUnits="false" id="losartan_pc" initialAmount="0.0" name="losartan">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="peripherial_compartment.losartan_pc" height="40" isTitleHidden="false" title="losartan" width="70" x="725" y="135"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" compartment="stomach" constant="false" hasOnlySubstanceUnits="false" id="losartan_stm" initialAmount="0.0" name="losartan">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="stomach.losartan_stm" height="40" isTitleHidden="false" title="losartan" width="70" x="145" y="140"/>
+            <biouml:specieInfo type="simple chemical"/>
+          </biouml:BIOUML>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter constant="false" id="CL_m" name="CL_m" value="5.5">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">L/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="L/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="CL_p" name="CL_p" value="184.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">L/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="L/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="C_m" name="C_m" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">pmol/ml или nmol/L</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="pmol/ml или nmol/L"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="C_p" name="C_p" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">pmol/ml или nmol/L</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="pmol/ml или nmol/L"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="Q" name="Q" value="129.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">L/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="L/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="T" name="T" value="0.271">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="Vm" name="Vm" value="9.66">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">L</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="L"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="Vp_1" name="Vp_1" value="43.7">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">L</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="L"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="Vp_2" name="Vp_2" value="1160.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">L</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="L"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="a" name="a" value="4.56">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="b" name="b" value="3.95">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="k_12" name="k_12" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="k_21" name="k_21" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="k_a" name="k_a" value="1.93">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="k_elm" name="k_elm" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="k_elp" name="k_elp" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="k_m" name="k_m" value="0.452">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">1/h</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="1/h"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+      <parameter constant="false" id="start_CYP2C9" name="start_CYP2C9" value="0.0">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">безразмерная</body>
+        </notes>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:variableInfo comment="безразмерная"/>
+          </biouml:BIOUML>
+        </annotation>
+      </parameter>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment metaid="oral_dose" symbol="losartan_stm">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo comment="в пикомолях" completeName="oral_dose" height="0" isTitleHidden="false" title="oral_dose" width="0" x="115" y="31"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <cn>100.0</cn>
+              <apply>
+                <times/>
+                <cn>1000.0</cn>
+                <cn>461.01</cn>
+              </apply>
+            </apply>
+            <cn>1.0E12</cn>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfRules>
+      <assignmentRule variable="C_p">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="C_p" height="0" isTitleHidden="false" title="pmol/ml или nmol/L" width="0" x="75" y="352"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci>losartan_cc</ci>
+            <apply>
+              <times/>
+              <ci>Vp_1</ci>
+              <cn>1000.0</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="C_m">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="C_p_1" height="0" isTitleHidden="false" title="pmol/ml или nmol/L" width="0" x="80" y="430"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci>E3174_cc</ci>
+            <apply>
+              <times/>
+              <ci>Vm</ci>
+              <cn>1000.0</cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="k_12">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="k_12" height="0" isTitleHidden="false" title="k_12" width="0" x="210" y="239"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci>Q</ci>
+            <ci>Vp_1</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="k_21">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="k_13" height="0" isTitleHidden="false" title="k_21" width="0" x="210" y="299"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci>Q</ci>
+            <ci>Vp_2</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="k_elp">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="k_elp" height="0" isTitleHidden="false" title="k_elp" width="0" x="132" y="237"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci>CL_p</ci>
+            <ci>Vp_1</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="k_elm">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="k_elp_1" height="0" isTitleHidden="false" title="k_elm" width="0" x="127" y="300"/>
+          </biouml:BIOUML>
+        </annotation>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci>CL_m</ci>
+            <ci>Vm</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="E3174_elimination" name="E3174_cc -&gt; E3174_out" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="E3174_elimination" height="0" isTitleHidden="false" title="E3174_cc -&gt; E3174_out" width="0" x="645" y="345"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="E3174_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="E3174_elimination__E3174_cc_as_reactant" title="Reaction_1__E3174_cc_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="E3174_out" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="E3174_elimination__E3174_out_as_product" title="Reaction_1__E3174_out_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_elm</ci>
+              <ci>E3174_cc</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="L_from_cc_to_pc" name="losartan_cc -&gt; losartan_pc" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="L_from_cc_to_pc" height="0" isTitleHidden="false" title="losartan_cc -&gt; losartan_pc" width="0" x="655" y="135"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="losartan_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="L_from_cc_to_pc__losartan_cc_as_reactant" title="Reaction_1__losartan_cc_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="losartan_pc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="L_from_cc_to_pc__losartan_pc_as_product" title="Reaction_1__losartan_pc_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_12</ci>
+              <ci>losartan_cc</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="L_from_pc_to_cc" name="losartan_pc -&gt; losartan_cc" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="L_from_pc_to_cc" height="0" isTitleHidden="false" title="losartan_pc -&gt; losartan_cc" width="0" x="655" y="160"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="losartan_pc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="L_from_pc_to_cc__losartan_pc_as_reactant" title="Reaction_1__losartan_pc_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="losartan_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="L_from_pc_to_cc__losartan_cc_as_product" title="Reaction_1__losartan_cc_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_21</ci>
+              <ci>losartan_pc</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="absorption" name="losartan_int -&gt; losartan_cc" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="absorption" height="0" isTitleHidden="false" title="losartan_int -&gt; losartan_cc" width="0" x="440" y="150"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="losartan_int" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="absorption__losartan_int_as_reactant" title="Reaction_1__losartan_int_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="losartan_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="absorption__losartan_cc_as_product" title="Reaction_1__losartan_cc_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_a</ci>
+              <ci>losartan_int</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="CYP2C9_reaction" name="losartan_cc -&gt; E3174_cc" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="central_compartment.CYP2C9_reaction" height="0" isTitleHidden="false" title="losartan_cc -&gt; E3174_cc" width="0" x="551" y="252"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="losartan_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="CYP2C9_reaction__losartan_cc_as_reactant" title="Reaction_1__losartan_cc_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="E3174_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="CYP2C9_reaction__E3174_cc_as_product" title="Reaction_1__E3174_cc_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <times/>
+                <ci>k_m</ci>
+                <ci>losartan_cc</ci>
+              </apply>
+              <ci>start_CYP2C9</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="L_elimination" name="losartan_cc -&gt; losartan_out" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="central_compartment.L_elimination" height="0" isTitleHidden="false" title="losartan_cc -&gt; losartan_out" width="0" x="550" y="110"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="losartan_cc" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="L_elimination__losartan_cc_as_reactant" title="Reaction_1__losartan_cc_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="losartan_out" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="L_elimination__losartan_out_as_product" title="Reaction_1__losartan_out_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci>k_elp</ci>
+              <ci>losartan_cc</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="gastric_emptying" name="losartan_stm -&gt; losartan_int" reversible="false">
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:reactionInfo/>
+            <biouml:nodeInfo completeName="gastric_emptying" height="0" isTitleHidden="false" title="losartan_stm -&gt; losartan_int" width="0" x="270" y="150"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="false" species="losartan_stm" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="gastric_emptying__losartan_stm_as_reactant" title="Reaction_1__losartan_stm_as_reactant"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="false" species="losartan_int" stoichiometry="1">
+            <annotation>
+              <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+                <biouml:edgeInfo edgeID="gastric_emptying__losartan_int_as_product" title="Reaction_1__losartan_int_as_product"/>
+              </biouml:BIOUML>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <max/>
+                <cn>0.0</cn>
+                <apply>
+                  <times/>
+                  <ci>a</ci>
+                  <apply>
+                    <sin/>
+                    <apply>
+                      <times/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <cn>2.0</cn>
+                          <pi/>
+                        </apply>
+                        <ci>b</ci>
+                      </apply>
+                      <csymbol definitionURL="http://www.sbml.org/sbml/symbols/time" encoding="text">time</csymbol>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <ci>losartan_stm</ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event id="CYP2C9_delay" useValuesFromTriggerTime="true">
+        <trigger initialValue="false" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <csymbol definitionURL="http://www.sbml.org/sbml/symbols/time" encoding="text">time</csymbol>
+              <ci>T</ci>
+            </apply>
+          </math>
+        </trigger>
+        <annotation>
+          <biouml:BIOUML xmlns:biouml="http://www.biouml.org/ns">
+            <biouml:nodeInfo completeName="CYP2C9_delay" height="0" isTitleHidden="false" title="CYP2C9_delay" width="0" x="680" y="240"/>
+          </biouml:BIOUML>
+        </annotation>
+        <listOfEventAssignments>
+          <eventAssignment variable="start_CYP2C9">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn>1.0</cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
