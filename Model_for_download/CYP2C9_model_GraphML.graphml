@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:y="http://www.yworks.com/xml/graphml" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+ http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <key id="id1" for="node" attr.name="description" attr.type="string"/>
+  <key id="id2" for="edge" attr.name="description" attr.type="string"/>
+  <key id="id3" for="node" yfiles.type="nodegraphics"/>
+  <key id="id4" for="edge" yfiles.type="edgegraphics"/>
+
+  <graph edgedefault="directed">
+    <node id="CYP2C9_delay">
+      <data key="id1">CYP2C9_delay</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>CYP2C9_delay</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="C_p">
+      <data key="id1">pmol/ml &#1080;&#1083;&#1080; nmol/L</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>pmol/ml &#1080;&#1083;&#1080; nmol/L</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="C_p_1">
+      <data key="id1">pmol/ml &#1080;&#1083;&#1080; nmol/L</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>pmol/ml &#1080;&#1083;&#1080; nmol/L</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="C_p_1_1">
+      <data key="id1">ng/ml</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>ng/ml</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="C_p_2">
+      <data key="id1">ng/ml</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>ng/ml</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="E3174_out">
+      <data key="id1">E3174</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="726" y="331"/>
+          <y:NodeLabel>E3174</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="Reaction_1">
+      <data key="id1">stomach/losartan_stm -&gt; intestine/losartan_int</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="266" y="151"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="Reaction_2">
+      <data key="id1">intestine/losartan_int -&gt; central_compartment/losartan_cc</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="444" y="150"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="Reaction_3">
+      <data key="id1">central_compartment/losartan_cc -&gt; losartan_out</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="552" y="66"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="Reaction_5">
+      <data key="id1">central_compartment/losartan_cc -&gt; peripherial_compartment/losartan_pc</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="659" y="139"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="Reaction_6">
+      <data key="id1">peripherial_compartment/losartan_pc -&gt; central_compartment/losartan_cc</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="659" y="159"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="Reaction_7">
+      <data key="id1">central_compartment/E3174_cc -&gt; E3174_out</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="658" y="346"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="central_compartment">
+      <data key="id1">central compartment</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="360" width="190" x="460" y="80"/>
+          <y:NodeLabel>central compartment</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="central_compartment.E3174_cc">
+      <data key="id1">E3174</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="525" y="330"/>
+          <y:NodeLabel>E3174</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="central_compartment.Reaction_4">
+      <data key="id1">central_compartment/losartan_cc -&gt; central_compartment/E3174_cc</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="15" width="15" x="548" y="249"/>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="central_compartment.losartan_cc">
+      <data key="id1">losartan</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="515" y="135"/>
+          <y:NodeLabel>losartan</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+
+    <edge id="Reaction_4__E3174_cc_as_product" source="central_compartment.Reaction_4" target="central_compartment.E3174_cc">
+      <data key="id2">Reaction_4__E3174_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_4__losartan_cc_as_reactant" source="central_compartment.losartan_cc" target="central_compartment.Reaction_4">
+      <data key="id2">Reaction_4__losartan_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <node id="equation_1">
+      <data key="id1">nmol*h/L</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>nmol*h/L</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="equation_1_1">
+      <data key="id1">nmol*h/L</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>nmol*h/L</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="equation_2">
+      <data key="id1">equation_2</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>equation_2</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="intestine">
+      <data key="id1">intestine</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="360" width="150" x="285" y="80"/>
+          <y:NodeLabel>intestine</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="intestine.losartan_int">
+      <data key="id1">losartan</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="320" y="135"/>
+          <y:NodeLabel>losartan</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+
+    <node id="k_12">
+      <data key="id1">k_12</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>k_12</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="k_13">
+      <data key="id1">k_21</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>k_21</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="k_elp">
+      <data key="id1">k_elp</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>k_elp</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="k_elp_1">
+      <data key="id1">k_elm</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>k_elm</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="losartan_out">
+      <data key="id1">losartan</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="515" y="10"/>
+          <y:NodeLabel>losartan</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="oral_dose">
+      <data key="id1">oral_dose</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>oral_dose</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="peripherial_compartment">
+      <data key="id1">peripherial compartment</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>peripherial compartment</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="peripherial_compartment.losartan_pc">
+      <data key="id1">losartan</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="725" y="135"/>
+          <y:NodeLabel>losartan</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+
+    <node id="stomach">
+      <data key="id1">stomach</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:NodeLabel>stomach</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="stomach.losartan_stm">
+      <data key="id1">losartan</data>
+      <data key="id3">
+        <y:ShapeNode >
+          <y:Geometry height="40" width="70" x="146" y="132"/>
+          <y:NodeLabel>losartan</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+
+
+    <edge id="Reaction_1__losartan_int_as_product" source="Reaction_1" target="intestine.losartan_int">
+      <data key="id2">Reaction_1__losartan_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_1__losartan_stm_as_reactant" source="stomach.losartan_stm" target="Reaction_1">
+      <data key="id2">Reaction_1__losartan_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_2__losartan_cc_as_product" source="Reaction_2" target="central_compartment.losartan_cc">
+      <data key="id2">Reaction_2__losartan_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_2__losartan_int_as_reactant" source="intestine.losartan_int" target="Reaction_2">
+      <data key="id2">Reaction_2__losartan_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_3__losartan_cc_as_reactant" source="central_compartment.losartan_cc" target="Reaction_3">
+      <data key="id2">Reaction_3__losartan_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_3__losartan_out_as_product" source="Reaction_3" target="losartan_out">
+      <data key="id2">Reaction_3__losartan_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_5__losartan_cc_as_reactant" source="central_compartment.losartan_cc" target="Reaction_5">
+      <data key="id2">Reaction_5__losartan_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_5__losartan_pc_as_product" source="Reaction_5" target="peripherial_compartment.losartan_pc">
+      <data key="id2">Reaction_5__losartan_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_6__losartan_cc_as_product" source="Reaction_6" target="central_compartment.losartan_cc">
+      <data key="id2">Reaction_6__losartan_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_6__losartan_pc_as_reactant" source="peripherial_compartment.losartan_pc" target="Reaction_6">
+      <data key="id2">Reaction_6__losartan_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_7__E3174_cc_as_reactant" source="central_compartment.E3174_cc" target="Reaction_7">
+      <data key="id2">Reaction_7__E3174_as_reactant</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="none"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="Reaction_7__E3174_out_as_product" source="Reaction_7" target="E3174_out">
+      <data key="id2">Reaction_7__E3174_as_product</data>
+      <data key="id4">
+        <y:PolyLineEdge >
+          <y:LineStyle type="line"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+</graphml>
