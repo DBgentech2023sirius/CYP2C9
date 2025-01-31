@@ -10,7 +10,7 @@ Also you can test our model in [BioUML](https://sirius-web.org/bioumlweb/#de=dat
 * Experimental data for model validation (Experimental data/Yasar2002 - ExpData...)
 * Optimization file for model validation (Optimizations/optimization for initial model)
 * Jupyter files to create plots from our study (Jupyter documents/Plots.ipynb and Jupyter documents/Parameter_Identifiability.ipynb) 
-* Script for pharmacokinetic analysis (Jupyter documents/Pharmacokinetic_analysis.ipynb)
+* Script for pharmacokinetic analysis (Scripts/pharmacokinetic_analysis.js)
 * Cardiorenal model [(Kutumova et al., 2022)](https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.1070115/full) (Diagrams/CVS model) 
 * Virtual hypertensive population of 100 patients (Experimental data/virtual_hypertensive_population_of_100)
 * Picture of distribution of physiological characteristics of the virtual hypertensive population (Jupyter documents/Virtual_Population_Parameter_Distribution.ipynb)
