@@ -14,6 +14,7 @@ Also you can test our model in [BioUML](https://sirius-web.org/bioumlweb/#de=dat
 * Cardiorenal model [(Kutumova et al., 2022)](https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.1070115/full) (Diagrams/CVS model) 
 * Virtual hypertensive population of 100 patients (Experimental data/virtual_hypertensive_population_of_100)
 * Picture of distribution of physiological characteristics of the virtual hypertensive population (Jupyter documents/Virtual_Population_Parameter_Distribution.ipynb)
+* Blood pressure changes for virtual patients with different _CYP2C9_ genotypes (Experimental data/antihypertensive_effect_result)
 * E-max model without parameter values (Diagrams/E-max model empty)
 * Data to validate E-max model (Experimental data/Data for E-max model validation)
 * Optimization file for E-max model validation (Optimizations/optimization for E-max model)
