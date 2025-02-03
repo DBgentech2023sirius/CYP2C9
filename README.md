@@ -26,6 +26,15 @@ Also you can test our model in [BioUML](https://sirius-web.org/bioumlweb/#de=dat
 3. Optimize the model again on the same experimental data with appropriate states and without k<sub>m</sub>
 <div>Please note that optimization methods are stochastic, consequently, values that differ from each other may be obtained at different runs!!!</div> 
 
+### Optimization settings:
+1. Optimization method: SRES (stochastic ranking evolutionary strategy)
+2. Number of iterations: 500
+3. Survival size: 20
+4. Initial simulation time, h: 0
+5. Completion simulation time, h: 24
+6. Simulation time increment, h: 0.05
+7. Selected engine: ODE Simulation Engine
+8. Simulator name: JVODE
 ___
 ### Experimental data [(Yasar et al., 2002)](https://ascpt.onlinelibrary.wiley.com/doi/10.1067/mcp.2002.121216) used for model validation are presented here:
 
