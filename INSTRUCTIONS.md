@@ -22,7 +22,7 @@
 
    * optimizationInfo - optimized values of the model parameters (given in Supplementary Table S8 for the original Karatza model and Supplementary Table S6 for the E-max model), values of the objective function (calculation deviation) and penalty function (in our case it is equal to 0, since we did not consider additional constraints on the model parameters), and the number of evaluations.
    ![optimizationInfo](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Pictures/Pictures%20of%20instructions/optimizationInfo.png?raw=true)
-   Note that in optimizationInfo for the original model by Karatza et al., you will have 3 values of the parameter k_m for each experiment (i.e. for each genotype) since this parameter was considered as local in this optimization.
+   Note that in optimizationInfo for the original model by Karatza et al., you will have 3 values of the parameter _k_m_ for each experiment (i.e. for each genotype) since this parameter was considered as local in this optimization.
    ![local_k_m](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Pictures/Pictures%20of%20instructions/local_k_m.png?raw=true)
    * Files whose names end with "plot" contain comparisons between the simulation results after optimization and the experimental data used for it. Such plots are provided for each experiment and can be found in our manuscript (Figure 3).
    ![plot](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Pictures/Pictures%20of%20instructions/plot.png?raw=true)
