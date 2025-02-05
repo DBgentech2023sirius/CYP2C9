@@ -1,7 +1,7 @@
 # Instructions on how to reproduce our results:
 
 1. Go to the optimization file on the BioUML server using one of the following links:<br>
-   * [optimization](https://sirius-web.org/bioumlweb/#de=data/Collaboration%20(git)/CYP2C9_losartan_metabolism/Data/Optimizations/optimization%20for%20initial%20model) of the parameters of the original model by Karatza et al. (2020),<br>
+   * [optimization](https://sirius-web.org/bioumlweb/#de=data/Collaboration%20(git)/CYP2C9_losartan_metabolism/Data/Optimizations/optimization%20for%20initial%20model) of the parameters of the original model by [Karatza et al. (2020)](https://doi.org/10.1111/bcpt.13321),<br>
    * [optimization](https://sirius-web.org/bioumlweb/#de=data/Collaboration%20(git)/CYP2C9_losartan_metabolism/Data/Optimizations/optimization%20for%20E-max%20model) of the E-max model parameters.
 
 2. To start the optimization process, click the ”Start optimization process” button.
