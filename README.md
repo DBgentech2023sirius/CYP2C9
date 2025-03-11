@@ -3,7 +3,7 @@ Pharmacokinetic Model that predicts plasma concentration-time curves of losartan
 
 ![Model](https://gitlab.sirius-web.org/DB_gentech2023_sirius/CYP2C9/-/raw/master/Pictures/схема_модели_BioUML_english.png)
 
-You can download both [initial model](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Models/KaratzaKaralis2020%20-%20CYP%20mediated%20losartan%20metabolism.xml) [(Karatza and Karalis, 2020)](https://onlinelibrary.wiley.com/doi/10.1111/bcpt.13321) and our [model](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Models/Babaev2024%20-%20CYP2C9%20variants.xml) in SBML format to verify them in other software packages.<br>
+You can download both [initial model](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Models/KaratzaKaralis2020%20-%20CYP%20mediated%20losartan%20metabolism%20with%20units%20without%20BioUML%20annotation.xml) [(Karatza and Karalis, 2020)](https://onlinelibrary.wiley.com/doi/10.1111/bcpt.13321) and our [model](https://github.com/DBgentech2023sirius/CYP2C9/blob/master/Models/Babaev2024%20-%20CYP2C9%20variants%20with%20units%20without%20BioUML%20annotation.xml) in SBML format to verify them in other software packages.<br>
 Also you can test our model in [BioUML](https://sirius-web.org/bioumlweb/#de=data/Collaboration%20(git)/CYP2C9_losartan_metabolism/Data/Diagrams/Babaev2024%20-%20CYP2C9%20variants) software. In provided project you can find all files to reproduce our model:
 * Model with initial parameter values (Diagrams/KaratzaKaralis2020 - CYP mediated losartan metabolism)
 * Our final model (Diagrams/Babaev2024 - CYP2C9 variants )
